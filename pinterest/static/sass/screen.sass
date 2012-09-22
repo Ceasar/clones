@@ -13,6 +13,7 @@
 
 
 $text-color: #524D4D
+$shadow: rgba(34, 25, 25, 0.4) 0 1px 3px
 
 html
   background: #F7F5F5 url(/static/img/paper.jpeg) repeat
@@ -58,7 +59,7 @@ body
   border: 1px solid #CFCACA
   background-color: #FAF7F8
   font-size: 13px
-  @include box-shadow(white 0 1px white inset, rgba(34, 25, 25, 0.4) 0 1px 3px)
+  @include box-shadow(white 0 1px white inset, $shadow)
 
   ul
     margin: 0 auto
@@ -75,12 +76,23 @@ body
       &:hover
         text-decoration: underline
 
+#wrapper
+  margin: 60px auto 0
+
 .pin
   width: 192px
+  margin: 7px
   padding: 15px 15px
-  float: left
-  // display: inline-block
-  // vertical-align: top
+  // float: left
+  display: inline-block
+  vertical-align: top
+  background: white
+  font-size: 11px
+  @include box-shadow($shadow)
 
   img
     max-width: 100%
+
+  p
+    word-wrap: break-word
+    line-height: 1.35em

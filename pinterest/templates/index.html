@@ -19,13 +19,12 @@
             <li><a href="#">Gifts</a></li>
         </ul>
     </div>
-    <h1>Pins</h1>
     <div id="wrapper">
         <div id="pins">
             {% for pin in pins %}
             <div class="pin">
-                <span class="title">{{ pin.title }}</span>
                 <img src="{{ url_for('static', filename="img/" + pin.filename) }}"/>
+                <p class="description">{{ pin.title }}</p>
             </div>
             {% endfor %}
         </div>

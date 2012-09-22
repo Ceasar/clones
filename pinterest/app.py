@@ -18,8 +18,8 @@ def parse_csv(filename):
 @app.route('/')
 def hello_world():
     pins = list(parse_csv("data/pins.csv"))
-    print pins
-    return render_template('index.html', pins=pins)
+    categories = list(parse_csv("data/categories.csv"))
+    return render_template('index.html', *locals())
 
 if __name__ == '__main__':
     app.run(debug=True)
