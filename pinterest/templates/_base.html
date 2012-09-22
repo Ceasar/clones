@@ -12,7 +12,9 @@
         <![endif]-->
 
         <!-- Le styles -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/print.css') }}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/ie.css') }}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/screen.css') }}" type="text/css" media="screen">
     </head>
     <body>
         {% block body %}
