@@ -1,2 +1,4 @@
 .DS_STORE
 *.swp
+.sass-cache
+pinterest/static/css/
