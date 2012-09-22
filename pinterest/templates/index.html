@@ -13,7 +13,16 @@
     <div id="categories">
         <ul>
             <li><a href="#">Following</a></li>
-            <li><a href="#">Categories</a></li>
+            <li>
+                <a href="#">Categories</a>
+                <ul id="categoryDropdown">
+                    {% for category in categories %}
+                    <li>
+                        <a href="#">{{ category.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
             <li><a href="#">Everything</a></li>
             <li><a href="#">Popular</a></li>
             <li><a href="#">Gifts</a></li>

@@ -59,6 +59,7 @@ body
   border: 1px solid #CFCACA
   background-color: #FAF7F8
   font-size: 13px
+  z-index: 1
   @include box-shadow(white 0 1px white inset, $shadow)
 
   ul
@@ -66,6 +67,7 @@ body
 
   li
     +horizontal-list
+    position: relative
     padding: 9px 0 0
     height: 23px
 
@@ -75,6 +77,32 @@ body
 
       &:hover
         text-decoration: underline
+
+  &:hover
+    #categoryDropdown
+      display: block
+
+#categoryDropdown
+  position: absolute 
+  display: none
+  left: 0px
+  top: 32px + 1px
+  width: 140px
+  background: white
+  @include box-shadow($shadow)
+
+  li
+    width: 120px
+    padding: 5px 10px
+    text-transform: capitalize
+    text-align: left
+    cursor: pointer
+
+    &:hover
+      background: #E1DFDF
+      a
+        text-decoration: none
+
 
 #wrapper
   margin: 60px auto 0

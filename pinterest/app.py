@@ -19,7 +19,7 @@ def parse_csv(filename):
 def hello_world():
     pins = list(parse_csv("data/pins.csv"))
     categories = list(parse_csv("data/categories.csv"))
-    return render_template('index.html', *locals())
+    return render_template('index.html', **locals())
 
 if __name__ == '__main__':
     app.run(debug=True)
